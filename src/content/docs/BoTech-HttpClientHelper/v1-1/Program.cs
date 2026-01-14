@@ -3,11 +3,9 @@ using System.Text;
 
 Console.WriteLine("Welcome to BoTech.HttpClientHelper. \n Testing some features...");
 
-HttpRequestHelper httpRequestHelper = new HttpRequestHelper("https://api.github.com");
+HttpRequestHelper httpRequestHelper = new HttpRequestHelper("https://example.com/");
 
-RequestResult<string> result = httpRequestHelper.HttpGetString(
-    "/markdown",
-    new StringContent("{\"text\":\"Hello **world**\"}", Encoding.UTF8, "application/json")).Result;
+RequestResult<string> result = httpRequestHelper.HttpGetString("").Result;
 
 if(result.IsSuccess())
 {
