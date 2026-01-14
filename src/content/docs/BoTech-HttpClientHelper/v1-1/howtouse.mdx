@@ -7,7 +7,14 @@ import { Code, Badge, Card, CardGrid } from '@astrojs/starlight/components';
 import importedCode  from './Program.cs?raw';
 
 ## Example
-+ A simple example of to use the BoTech.HttpClientHelper library with the github api.
++ A simple example that shows how to use the NuGet package [BoTech.HttpClientHelper](https://www.nuget.org/packages/BoTech.HttpClientHelper/).
++ First, you obviously need to install the package:
+
+```bash
+dotnet add package BoTech.HttpClientHelper
+```
+
++ And then you can use the package, for example, as follows:
 
 <Code code={importedCode}
       title="Program.cs" mark={['HttpRequestHelper', 'RequestResult']} lang="c#" />
