@@ -1,0 +1,27 @@
+---
+title: Welcome to docs.botech.dev
+description: Get started building your docs site with Starlight.
+template: splash # Remove or comment out this line to display the site sidebar on this page.
+hero:
+  tagline: Here you can find everything about botech.dev's packages and projects.
+  image:
+    file: ../../assets/BoTech-Logo-Small.webp
+  actions:
+    - text: Getting Started
+      link: /projects/
+      icon: right-arrow
+    - text: www.botech.dev
+      link: https://www.botech.dev
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Projects
+
+<CardGrid stagger>
+	<Card title="BoTech.HttpClientHelper" icon="open-book">
+		Learn more in [the BoTech.HttpClientHelper Docs](/botech-httpclienthelper/v1-1/about/).
+	</Card>
+</CardGrid>

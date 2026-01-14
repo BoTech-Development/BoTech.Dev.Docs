@@ -1,0 +1,178 @@
+---
+title: The HttpClientHelper Package
+description: Brief information about the project. What is it good for? ...
+---
+import { Code, Badge, Card, CardGrid } from '@astrojs/starlight/components';
+
+## Methods
+### Http-Get
+
+<details>
+    <summary>HttpGetFile</summary>
+    <Code code="public async Task<RequestResult<dynamic>> HttpGetFile(string url, string fileName)" lang="c#" />
+    + General: Performs a GET request to the given endpoint (baseUrl + url). This Method also saves the file to a specific location defined in fileName.
+    + Param (fileName): The full path of a file to overwrite or create.
+    + Param (url): The endpoint url
+    + Returns: The request result.
+</details>
+<details>
+    <summary>HttpGetJsonObject</summary>
+    <Code code="public async Task<RequestResult<T>> HttpGetJsonObject<T>(string url)" lang="c#" />
+    + General: Performs a GET request to the given endpoint (baseUrl + url)
+    + Param (url): The endpoint url
+    + Returns: The request result with parsed json data object
+</details>
+<details>
+    <summary>HttpGetString</summary>
+    <Code code="public async Task<RequestResult<string>> HttpGetString(string url)" lang="c#" />
+    + General: Sends a request to _baseUrl + url and returns the string returned by that method.
+    + Param (url): The endpoint url
+    + Returns: The returned string from the api and the request result.
+</details>
+<details>
+    <summary>HttpGet</summary>
+    <Code code="public async Task<RequestResult<dynamic>> HttpGet(string url)" lang="c#" />
+    + General: Performs a GET request to the given endpoint (baseUrl + url)
+    + Param (url): The endpoint url
+    + Returns: The request result with no parsed json data.
+</details>
+
+### Http-Delete
+
+<details>
+    <summary>HttpDelete</summary>
+    <Code code="public async Task<RequestResult<dynamic>> HttpDelete(string url, HttpContent? content)" lang="c#" />
+    + General: Performs a DELETE request to the given endpoint (baseUrl + url)
+    + Param (content): The http content to send
+    + Param (url): The endpoint url.
+    + Returns: The request result with no deserialized data.
+</details>
+<details>
+    <summary>HttpDeleteJson</summary>
+    <Code code="public async Task<RequestResult<dynamic>> HttpDeleteJson(string url, object? content)" lang="c#" />
+    + General: Performs a DELETE request to the given endpoint (baseUrl + url)
+    + Param (content): The object which should be serialized to json.
+    + Param (url): The endpoint url
+    + Returns: The request result with no deserialized data.
+</details>
+<details>
+    <summary>HttpDeleteJsonAndGetJson</summary>
+    <Code code="public async Task<RequestResult<T>> HttpDeleteJsonAndGetJson<T>(string url, object? content)" lang="c#" />
+    + General: Performs a DELETE request to the given endpoint (baseUrl + url)
+    + Param (fileName): The full path of a file to overwrite or create.
+    + Param (url): The endpoint url
+    + Returns: The request result with the deserialized object.
+</details>
+<details>
+    <summary>HttpDeleteContentAndGetJson</summary>
+    <Code code=" public async Task<RequestResult<T>> HttpDeleteContentAndGetJson<T>(string url, HttpContent? content)" lang="c#" />
+    + General: Performs a DELETE request to the given endpoint (baseUrl + url)
+    + Param (fileName): The full path of a file to overwrite or create.
+    + Param (url): The endpoint url
+    + Returns: The request result with the deserialized object.
+</details>
+
+### Http-Put
+
+<details>
+    <summary>HttpPut</summary>
+    <Code code="public async Task<RequestResult<dynamic>> HttpPut(string url, HttpContent? content)" lang="c#" />
+    + General: Performs a PUT request to the given endpoint (baseUrl + url)
+    + Param (content): The http content
+    + Param (url): The endpoint url
+    + Returns: The request result.
+</details>
+<details>
+    <summary>HttpPutJson</summary>
+    <Code code="public async Task<RequestResult<dynamic>> HttpPutJson(string url, object? content)" lang="c#" />
+    + General: Performs a PUT request to the given endpoint (baseUrl + url)
+    + Param (content): The object which should be serialized to json.
+    + Param (url): The endpoint url
+    + Returns: The request result.
+</details>
+<details>
+    <summary>HttpPutJsonAndGetJson</summary>
+    <Code code="public async Task<RequestResult<T>> HttpPutJsonAndGetJson<T>(string url, object? content)" lang="c#" />
+    + General: Performs a PUT request to the given endpoint (baseUrl + url)
+    + Param (content): The object which should be serialized to json.
+    + Param (url): The endpoint url
+    + Returns: The request result.
+</details>
+<details>
+    <summary>HttpPutContentAndGetJson</summary>
+    <Code code="public async Task<RequestResult<T>> HttpPutContentAndGetJson<T>(string url, HttpContent? content)" lang="c#" />
+    + General: Performs a PUT request to the given endpoint (baseUrl + url)
+    +Param (content): The object which should be serialized to json.
+    + Param (url): The endpoint url
+    + Returns: The request result.
+</details>
+
+### Http-Patch
+
+<details>
+    <summary>HttpPatch</summary>
+    <Code code="public async Task<RequestResult<dynamic>> HttpPatch(string url, HttpContent? content)" lang="c#" />
+    + General: Performs a PATCH request to the given endpoint (baseUrl + url)
+    + Param (content): The http content
+    + Param (url): The endpoint url
+    + Returns: The request result with no deserialized data.
+</details>
+<details>
+    <summary>HttpPatchJson</summary>
+    <Code code="public async Task<RequestResult<dynamic>> HttpPatchJson(string url, object? content)" lang="c#" />
+    + General: Performs a PATCH request to the given endpoint (baseUrl + url)
+    + Param (content): The object which should be serialized to json.
+    + Param (url): The endpoint url
+    + Returns: The request result with no deserialized data.
+</details>
+<details>
+    <summary>HttpPatchJsonAndGetJson</summary>
+    <Code code="public async Task<RequestResult<T>> HttpPatchJsonAndGetJson<T>(string url, object? content)" lang="c#" />
+    + General: Performs a PATCH request to the given endpoint (baseUrl + url)
+    + Param (content): The object which should be serialized to json.
+    + Param (url): The endpoint url
+    + Returns: The request result with the deserialized object.
+</details>
+<details>
+    <summary>HttpPatchContentAndGetJson</summary>
+    <Code code="public async Task<RequestResult<T>> HttpPatchContentAndGetJson<T>(string url, HttpContent content)" lang="c#" />
+    + General: Performs a PATCH request to the given endpoint (baseUrl + url)
+    + Param (content): The object which should be serialized to json.
+    + Param (url): The endpoint url
+    + Returns: The request result with the deserialized object.
+</details>
+
+### Http-Post
+
+<details>
+    <summary>HttpPost</summary>
+    <Code code="public async Task<RequestResult<dynamic>> HttpPost(string url, HttpContent content)" lang="c#" />
+    + General: Performs a GET request to the given endpoint (baseUrl + url). This Method also saves the file to a specific location defined in fileName.
+    + Param (fileName): The full path of a file to overwrite or create.
+    + Param (url): The endpoint url
+    + Returns: The request result.
+</details>
+<details>
+    <summary>HttpPostJson</summary>
+    <Code code="public async Task<RequestResult<dynamic>> HttpPostJson(string url, object? content)" lang="c#" />
+    + General: Performs a GET request to the given endpoint (baseUrl + url). This Method also saves the file to a specific location defined in fileName.
+    + Param (fileName): The full path of a file to overwrite or create.
+    + Param (url): The endpoint url
+    + Returns: The request result.
+</details>
+<details>
+    <summary>HttpPostJsonAndGetJson</summary>
+    <Code code="public async Task<RequestResult<T>> HttpPostJsonAndGetJson<T>(string url, object? content)" lang="c#" />
+    + General: Performs a GET request to the given endpoint (baseUrl + url). This Method also saves the file to a specific location defined in fileName.
+    + Param (fileName): The full path of a file to overwrite or create.
+    + Param (url): The endpoint url
+    + Returns: The request result.
+</details>
+<details>
+    <summary>HttpPostContentAndGetJson</summary>
+    <Code code="public async Task<RequestResult<T>> HttpPostContentAndGetJson<T>(string url, HttpContent content)" lang="c#" />
+    + General: Performs a GET request to the given endpoint (baseUrl + url). This Method also saves the file to a specific location defined in fileName.
+    + Param (fileName): The full path of a file to overwrite or create.
+    + Param (url): The endpoint url
+    + Returns: The request result.
+</details>
