@@ -17,7 +17,7 @@ export default defineConfig({
 
 			},
 			editLink: {
-				baseUrl: 'https://github.com/BoTech-Development/BoTech.Dev.Docs/edit/main/'
+				baseUrl: 'https://github.com/BoTech-Development/BoTech.Dev.Docs/edit/master/'
 			},
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/BoTech-Development/' }],
 		}),
