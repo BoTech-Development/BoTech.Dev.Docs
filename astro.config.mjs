@@ -15,11 +15,6 @@ export default defineConfig({
 				categoryId: 'DIC_kwDOSIcKf84C7VwQ'
 			})],
 			title: 'docs.botech.dev',
-			logo: {
-				src: './src/assets/BoTechLogoCompleteWithSlogan.svg',
-				replacesTitle: true,
-			},
-			//customCss: ['./src/styles/logo.css'],
 			editLink: {
 				baseUrl: 'https://github.com/BoTech-Development/BoTech.Dev.Docs/edit/master/'
 			},
