@@ -1,0 +1,49 @@
+---
+title: Basics
+description: The Version scheme
+---
+import {Aside, Card, CardGrid} from '@astrojs/starlight/components';
+
+# The Scheme
+
+The version Number has the following scheme:
+```txt
+v<Major>.<Minor>.<Ticket>(<Task_Number>).<Lts_Ticket>.<Alpha/Beta/Rc/Lts> (<Release_Date>)
+```
+<Aside type="caution">Do not increase the major, minor, etc. numbers randomly. Please read this article or a concrete example [article](../howtouse) first!</Aside>
+
+## Meaning of *Major*
++ The Major version number can be used to declare major changes in the software, that **may** not be [backwards compatible](../namedefinitions#backwards-compatible).
++ The default/start value is 1.
++ If they increase the major number, they can declare breakthrough changes such as the implementation of many new features that stand out from the previous features.
+## Meaning of *Minor*
++ The Minor version can be used to declare a feature / bug fix update on the current generation ([Major Version](#meaning-of-major))
++ The minor version summarizes a collection of features or bugs.
++ When a milestone is fully implemented (the all items on the roadmap are marked as done), the minor version increases.
+## Meaning of *Ticket*
++ If you, for example, use platforms like GitHub or GitLab to host their projects, you use tickets to generate the ticket number.
+  + Otherwise, you can also create a roadmap to generate the version number.
++ The ticket number in the version number is increased by 1 with each closed ticket. Therefore, each ticket can and must be assigned its own version number.
+
+<Aside type="caution">Each ticket number may correspond to only one bug that was resolved or to a functionality that was implemented.</Aside>
+
+## Meaning of *Task Number*
++ If a ticket has a sub-ticket, the number of the task (sub-ticket) can be specified here.
+
+## Meaning of *Lts_Ticket*
++ This number must be used according to the same rules declared [here](#meaning-of-ticket), with the following exceptions:
+  + This number is only visible when it is greater 0.
+  + This number can only be used when the version is an [LTS](../namedefinitions#lts-version) version.
+  + Every LTS ticket is a release and can also be a version number, as all other version numbers may not be changed.
+
+## Meaning of *Alpha/Beta/Rc/Lts*
++ Each Version number except release versions such as v1.2.0 (20.04.2026) should include one of the following tags: Alpha/Beta/Rc/Lts
++ When a new development iteration starts you should add the Alpha tag.
++ When the dev version starts to improve and runs more stable the tag should be Beta.
++ Is development iteration mostly completed and there are only bug fixes to do and smaller features to implement, you can release a prerelease Version with the following schema:
+```txt
+v1.0.36.RC-2
+```
++
+  + This Version declares the second Prerelease version before the first Release (v1.1).
+  + 36 Tickets are already implemented.
