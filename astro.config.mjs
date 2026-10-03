@@ -8,6 +8,12 @@ import starlightGiscus from "starlight-giscus";
 export default defineConfig({
 	integrations: [
 		starlight({
+			head:[
+				{
+					tag: 'script',
+					attrs: { src: '/matomo.js', defer: true }
+				}
+			],
 			plugins: [starlightThemeGalaxy(), starlightGiscus({
 				repo: 'BoTech-Development/BoTech.Dev.Docs-Discussions',
 				repoId: 'R_kgDOSIcKfw',
